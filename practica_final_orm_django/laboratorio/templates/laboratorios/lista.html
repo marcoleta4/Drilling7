@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<h1>Lista de Laboratorios</h1>
+
+{% for laboratorio in laboratorios %}
+<p>
+  {{ laboratorio.nombre }}
+  
+  <a href="{% url 'editar_laboratorio' laboratorio.id %}">Editar</a>
+  
+  <a href="{% url 'eliminar_laboratorio' laboratorio.id %}">Eliminar</a>
+</p>
+{% endfor %}
+  
+{% endblock %}

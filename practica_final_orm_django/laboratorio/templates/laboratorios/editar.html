@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<h1>Editar Laboratorio</h1>
+
+<form method="POST">
+  {% csrf_token %}
+  
+  <label for="{{ form.nombre.id_for_label }}">Nombre:</label>
+  <input type="text" id="{{ form.nombre.id_for_label }}" name="{{ form.nombre.name }}" value="{{ form.nombre.value }}">
+  
+  <label for="{{ form.ciudad.id_for_label }}">Ciudad:</label>
+  <input type="text" id="{{ form.ciudad.id_for_label }}" name="{{ form.ciudad.name }}" value="{{ form.ciudad.value }}">
+  
+  <label for="{{ form.pais.id_for_label }}">Pais:</label>
+  <input type="text" id="{{ form.pais.id_for_label }}" name="{{ form.pais.name }}" value="{{ form.pais.value }}">
+  
+  <input type="submit" value="Guardar">
+</form>
+
+{% endblock %}
+  

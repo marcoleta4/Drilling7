@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<form method="POST">
+  {% csrf_token %}
+  <label for="nombre">Nombre:</label>
+  <input type="text" name="nombre" id="nombre">
+  <!-- Otros campos aquí -->
+  <button type="submit">Crear Laboratorio</button>
+</form>
+
+{% endblock %}
